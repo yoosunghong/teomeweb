@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teome — Game Studio</title>
+  <meta name="description" content="Teome는 덜어낼수록 선명해지는 게임을 만드는 인디 게임 스튜디오입니다.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="canonical" href="https://teomestudio.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Teome — Game Studio">
+  <meta property="og:description" content="Less, but deeper. 덜어내고, 남은 것을 깊게.">
+  <meta property="og:url" content="https://teomestudio.com/">
+  <meta property="og:image" content="https://teomestudio.com/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__logo" href="#top" aria-label="Teome 홈">
+      <img src="assets/logo-white.png" alt="Teome" width="484" height="100">
+    </a>
+    <nav class="nav__links" aria-label="주요 메뉴">
+      <a href="#games">Games</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO : 로고 + 스튜디오 철학 한 줄 -->
+    <section class="hero">
+      <h1 class="hero__logo">
+        <img src="assets/logo-white.png" alt="Teome" width="484" height="100">
+      </h1>
+      <p class="hero__statement">Less, but deeper.</p>
+      <p class="hero__statement-ko">덜어내고, 남은 것을 깊게.</p>
+      <a class="hero__scroll" href="#games">Our Games <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <!-- GAMES : 개발 게임 목록 (games.js 에서 데이터 수정) -->
+    <section id="games" class="section">
+      <div class="section__head">
+        <span class="section__index">01</span>
+        <h2 class="section__title">Games</h2>
+        <p class="section__count" id="games-count"></p>
+      </div>
+      <div class="games" id="games-list"></div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section id="philosophy" class="section">
+      <div class="section__head">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Philosophy</h2>
+      </div>
+
+      <blockquote class="manifesto">
+        우리는 더하기보다 덜어내는 쪽을 택합니다.<br>
+        남은 하나의 규칙, 하나의 감각이<br class="br-wide">
+        오래 기억되는 게임을 만듭니다.
+      </blockquote>
+
+      <ol class="principles">
+        <li class="principle">
+          <span class="principle__no">I</span>
+          <h3 class="principle__name">Less</h3>
+          <p class="principle__text">필요 없는 것을 덜어낼 때 게임의 핵심이 드러납니다. 화면에 남는 모든 것에는 이유가 있어야 합니다.</p>
+        </li>
+        <li class="principle">
+          <span class="principle__no">II</span>
+          <h3 class="principle__name">Feel</h3>
+          <p class="principle__text">설명보다 감각을 믿습니다. 튜토리얼이 아니라 손끝에서 이해되는 경험을 설계합니다.</p>
+        </li>
+        <li class="principle">
+          <span class="principle__no">III</span>
+          <h3 class="principle__name">Craft</h3>
+          <p class="principle__text">작게 시작하고 오래 다듬습니다. 완성도는 규모가 아니라 밀도에서 나옵니다.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact">
+      <div class="section__head">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <p class="contact__lead">함께 만들거나, 이야기 나누고 싶다면.</p>
+      <a class="contact__mail" href="mailto:contact@teomestudio.com">contact@teomestudio.com</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo-white.png" alt="" width="484" height="100" class="footer__logo">
+    <span>© <span id="year">2026</span> Teome Studio</span>
+  </footer>
+
+  <script src="games.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

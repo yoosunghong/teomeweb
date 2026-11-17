@@ -23,7 +23,13 @@
     games.forEach(function (g, i) {
       var card = el("article", "game game--" + (g.status || "upcoming"));
 
-      var cover = el("div", "game__cover");
+      var cover = el(g.url ? "a" : "div", "game__cover");
+      if (g.url) {
+        cover.href = g.url;
+        cover.target = "_blank";
+        cover.rel = "noopener";
+        cover.setAttribute("aria-label", g.title + " 바로가기");
+      }
       if (g.cover) {
         var img = el("img");
         img.src = g.cover;
@@ -39,7 +45,17 @@
 
       var body = el("div", "game__body");
       var head = el("div", "game__head");
-      head.appendChild(el("h3", "game__title", g.title));
+      var title = el("h3", "game__title");
+      if (g.url) {
+        var titleLink = el("a", null, g.title);
+        titleLink.href = g.url;
+        titleLink.target = "_blank";
+        titleLink.rel = "noopener";
+        title.appendChild(titleLink);
+      } else {
+        title.textContent = g.title;
+      }
+      head.appendChild(title);
       head.appendChild(el("span", "game__year", g.year || ""));
       body.appendChild(head);
       if (g.tagline) body.appendChild(el("p", "game__tagline", g.tagline));
@@ -65,7 +81,7 @@
   }
 
   function reveal() {
-    var targets = document.querySelectorAll(".section, .game, .principle");
+    var targets = document.querySelectorAll(".section, .game");
     if (!("IntersectionObserver" in window)) return;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

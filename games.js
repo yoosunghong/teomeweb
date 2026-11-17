@@ -10,17 +10,19 @@
  *  status    : "released" | "development" | "upcoming"
  *  platforms : ["PC", "Mobile", ...]
  *  cover     : 커버 이미지 경로 (예: "assets/games/mygame.jpg"), 없으면 비워두기
+ *  url       : 커버(배너)·제목 클릭 시 이동할 주소, 없으면 비워두기
  *  links     : [{ label: "Steam", url: "https://..." }, ...]
  */
 window.TEOME_GAMES = [
   {
-    title: "Project 01",
-    tagline: "Teome의 첫 번째 게임. 곧 공개됩니다.",
+    title: "illova",
+    tagline: "네 명의 어린 왕들과 만들어 나가는 은하 이야기",
     genre: "TBA",
     year: "2026",
     status: "development",
     platforms: ["PC"],
-    cover: "",
+    cover: "assets/games/illova.webp",
+    url: "https://illova.app",
     links: []
   },
   {
